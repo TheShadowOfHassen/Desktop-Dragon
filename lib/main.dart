@@ -13,8 +13,6 @@ var buttonTwoWebsites = [
   'https://www.gamingonlinux.com/',
   'https://itsfoss.com/',
 ];
-var label_time = 'dd';
-
 var buttonThree = 'MUSIC';
 var buttonThreeWebsites = ['https://open.spotify.com/'];
 
