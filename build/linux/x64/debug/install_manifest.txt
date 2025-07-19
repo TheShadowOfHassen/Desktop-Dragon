@@ -1,6 +1,7 @@
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/desktop_dragon
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/data/icudtl.dat
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/lib/liburl_launcher_linux_plugin.so
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/data/flutter_assets/version.json
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf

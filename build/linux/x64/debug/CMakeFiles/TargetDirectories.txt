@@ -18,3 +18,10 @@
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/runner/CMakeFiles/install.dir
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/runner/CMakeFiles/install/local.dir
 /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/runner/CMakeFiles/install/strip.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/url_launcher_linux_plugin.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/edit_cache.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/rebuild_cache.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/list_install_components.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/install.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/install/local.dir
+/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux/CMakeFiles/install/strip.dir
