@@ -196,6 +196,15 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//Value Computed by CMake
+gtk_BINARY_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/gtk
+
+//Value Computed by CMake
+gtk_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+gtk_SOURCE_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/gtk/linux
+
 //Path to a library.
 pkgcfg_lib_GIO_gio-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libgio-2.0.so
 
@@ -257,6 +266,15 @@ runner_IS_TOP_LEVEL:STATIC=OFF
 runner_SOURCE_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/runner
 
 //Value Computed by CMake
+screen_retriever_linux_BINARY_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux
+
+//Value Computed by CMake
+screen_retriever_linux_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+screen_retriever_linux_SOURCE_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux
+
+//Value Computed by CMake
 url_launcher_linux_BINARY_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux
 
 //Value Computed by CMake
@@ -264,6 +282,24 @@ url_launcher_linux_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 url_launcher_linux_SOURCE_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux
+
+//Value Computed by CMake
+window_manager_BINARY_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager
+
+//Value Computed by CMake
+window_manager_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+window_manager_SOURCE_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux
+
+//Value Computed by CMake
+yaru_window_linux_BINARY_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/yaru_window_linux
+
+//Value Computed by CMake
+yaru_window_linux_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+yaru_window_linux_SOURCE_DIR:STATIC=/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/yaru_window_linux/linux
 
 
 ########################

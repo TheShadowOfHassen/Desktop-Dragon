@@ -16,10 +16,14 @@ var buttonTwoWebsites = [
 var buttonThree = 'MUSIC';
 var buttonThreeWebsites = ['https://open.spotify.com/'];
 
-class DesktopDragon extends StatelessWidget {
-  DesktopDragon({super.key});
+class DesktopDragon extends StatefulWidget {
+  const DesktopDragon({super.key});
 
   @override
+  State<DesktopDragon> createState() => _DesktopDragonState();
+}
+
+class _DesktopDragonState extends State<DesktopDragon> {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Root widget
