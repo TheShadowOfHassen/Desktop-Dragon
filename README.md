@@ -1,2 +1,3 @@
-# Desktop Dragon
- A dragon for your desktop
+# desktop_dragon
+
+A new Flutter project.

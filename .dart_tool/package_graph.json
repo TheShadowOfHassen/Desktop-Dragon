@@ -240,22 +240,9 @@
       ]
     },
     {
-      "name": "url_launcher_windows",
-      "version": "3.1.4",
-      "dependencies": [
-        "flutter",
-        "url_launcher_platform_interface"
-      ]
-    },
-    {
-      "name": "url_launcher_web",
-      "version": "2.4.1",
-      "dependencies": [
-        "flutter",
-        "flutter_web_plugins",
-        "url_launcher_platform_interface",
-        "web"
-      ]
+      "name": "sky_engine",
+      "version": "0.0.0",
+      "dependencies": []
     },
     {
       "name": "url_launcher_platform_interface",
@@ -263,6 +250,13 @@
       "dependencies": [
         "flutter",
         "plugin_platform_interface"
+      ]
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "dependencies": [
+        "meta"
       ]
     },
     {
@@ -282,6 +276,14 @@
       ]
     },
     {
+      "name": "url_launcher_windows",
+      "version": "3.1.4",
+      "dependencies": [
+        "flutter",
+        "url_launcher_platform_interface"
+      ]
+    },
+    {
       "name": "url_launcher_ios",
       "version": "6.3.3",
       "dependencies": [
@@ -290,22 +292,14 @@
       ]
     },
     {
-      "name": "url_launcher_android",
-      "version": "6.3.16",
+      "name": "url_launcher_web",
+      "version": "2.4.1",
       "dependencies": [
         "flutter",
-        "url_launcher_platform_interface"
+        "flutter_web_plugins",
+        "url_launcher_platform_interface",
+        "web"
       ]
-    },
-    {
-      "name": "sky_engine",
-      "version": "0.0.0",
-      "dependencies": []
-    },
-    {
-      "name": "web",
-      "version": "1.1.1",
-      "dependencies": []
     },
     {
       "name": "flutter_web_plugins",
@@ -320,10 +314,16 @@
       ]
     },
     {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "url_launcher_android",
+      "version": "6.3.16",
       "dependencies": [
-        "meta"
+        "flutter",
+        "url_launcher_platform_interface"
       ]
     }
   ],
