@@ -60,7 +60,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(label_time),
+                      Text(labelTime),
                       const SizedBox(width: 50),
                       Text(
                         '  ^^     /======>\n (00)   /      /\n@@=====>\n    J        J',
