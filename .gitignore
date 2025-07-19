@@ -56,5 +56,3 @@ starredStations.json
 
 # FVM Version Cache
 .fvm/
-/build/linux/x64/debug
-/build

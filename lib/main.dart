@@ -15,8 +15,6 @@ var buttonTwoWebsites = [
 var buttonThree = 'MUSIC';
 var buttonThreeWebsites = ['https://open.spotify.com/'];
 
-var time = '10:00 PM';
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -31,15 +29,9 @@ class MyApp extends StatelessWidget {
             builder: (context) {
               return Column(
                 children: [
-                  Row(
-                    children: [
-                      Text(time),
-                      Text(
-                        '  ^^     /======>\n (00)   /      /\n@@=====>\n    J        J',
-                      ),
-                    ],
+                  Text(
+                    '  ^^     /======>\n (00)   /      /\n@@=====>\n    J        J',
                   ),
-
                   const SizedBox(height: 20),
                   Row(
                     children: [
