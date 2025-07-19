@@ -30,8 +30,10 @@ class MyApp extends StatelessWidget {
           child: Builder(
             builder: (context) {
               return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(time),
                       Text(
@@ -42,6 +44,7 @@ class MyApp extends StatelessWidget {
 
                   const SizedBox(height: 20),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
                         onPressed: () {
