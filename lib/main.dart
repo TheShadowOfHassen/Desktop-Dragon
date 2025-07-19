@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // Root widget
       home: Scaffold(
-        appBar: AppBar(title: const Text('My Home Page')),
+        appBar: AppBar(title: const Text('Desktop Dragon')),
         body: Center(
           child: Builder(
             builder: (context) {
