@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:date_format/date_format.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(DesktopDragon());
 
 var buttonOne = 'Button One';
 var buttonOneWebsites = ['https://github.com/'];
@@ -16,8 +16,8 @@ var buttonTwoWebsites = [
 var buttonThree = 'MUSIC';
 var buttonThreeWebsites = ['https://open.spotify.com/'];
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
+class DesktopDragon extends StatelessWidget {
+  DesktopDragon({super.key});
 
   @override
   Widget build(BuildContext context) {
