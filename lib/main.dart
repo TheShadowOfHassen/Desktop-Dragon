@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:date_format/date_format.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 var buttonOne = 'Button One';
 var buttonOneWebsites = ['https://github.com/'];
@@ -15,10 +16,8 @@ var buttonTwoWebsites = [
 var buttonThree = 'MUSIC';
 var buttonThreeWebsites = ['https://open.spotify.com/'];
 
-var time = '10:00 PM';
-
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,8 @@ class MyApp extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(time),
+                      Text(label_time),
+                      const SizedBox(width: 50),
                       Text(
                         '  ^^     /======>\n (00)   /      /\n@@=====>\n    J        J',
                       ),
@@ -75,6 +75,8 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  var label_time = updateClock();
 }
 
 void open_urls(List urls) {
@@ -82,4 +84,25 @@ void open_urls(List urls) {
     Uri url = Uri.parse(name);
     launchUrl(url);
   }
+}
+
+String updateClock() {
+  var time = formatDate(DateTime.now(), [
+    DD,
+    ' ',
+    MM,
+    ' ',
+    dd,
+    ', ',
+    yyyy,
+    '\n',
+    h,
+    ':',
+    n,
+    ':',
+    s,
+    '  ',
+    am,
+  ]);
+  return time;
 }

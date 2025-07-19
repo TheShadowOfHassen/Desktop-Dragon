@@ -7,6 +7,7 @@
       "name": "desktop_dragon",
       "version": "0.1.0",
       "dependencies": [
+        "date_format",
         "flutter",
         "url_launcher"
       ],
@@ -75,6 +76,11 @@
         "sky_engine",
         "vector_math"
       ]
+    },
+    {
+      "name": "date_format",
+      "version": "2.0.9",
+      "dependencies": []
     },
     {
       "name": "lints",
@@ -240,9 +246,22 @@
       ]
     },
     {
-      "name": "sky_engine",
-      "version": "0.0.0",
-      "dependencies": []
+      "name": "url_launcher_windows",
+      "version": "3.1.4",
+      "dependencies": [
+        "flutter",
+        "url_launcher_platform_interface"
+      ]
+    },
+    {
+      "name": "url_launcher_web",
+      "version": "2.4.1",
+      "dependencies": [
+        "flutter",
+        "flutter_web_plugins",
+        "url_launcher_platform_interface",
+        "web"
+      ]
     },
     {
       "name": "url_launcher_platform_interface",
@@ -250,13 +269,6 @@
       "dependencies": [
         "flutter",
         "plugin_platform_interface"
-      ]
-    },
-    {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
-      "dependencies": [
-        "meta"
       ]
     },
     {
@@ -276,14 +288,6 @@
       ]
     },
     {
-      "name": "url_launcher_windows",
-      "version": "3.1.4",
-      "dependencies": [
-        "flutter",
-        "url_launcher_platform_interface"
-      ]
-    },
-    {
       "name": "url_launcher_ios",
       "version": "6.3.3",
       "dependencies": [
@@ -292,14 +296,22 @@
       ]
     },
     {
-      "name": "url_launcher_web",
-      "version": "2.4.1",
+      "name": "url_launcher_android",
+      "version": "6.3.16",
       "dependencies": [
         "flutter",
-        "flutter_web_plugins",
-        "url_launcher_platform_interface",
-        "web"
+        "url_launcher_platform_interface"
       ]
+    },
+    {
+      "name": "sky_engine",
+      "version": "0.0.0",
+      "dependencies": []
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
     },
     {
       "name": "flutter_web_plugins",
@@ -314,16 +326,10 @@
       ]
     },
     {
-      "name": "web",
-      "version": "1.1.1",
-      "dependencies": []
-    },
-    {
-      "name": "url_launcher_android",
-      "version": "6.3.16",
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
       "dependencies": [
-        "flutter",
-        "url_launcher_platform_interface"
+        "meta"
       ]
     }
   ],
