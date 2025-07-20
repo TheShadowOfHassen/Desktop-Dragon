@@ -4,11 +4,13 @@ import 'package:date_format/date_format.dart';
 import 'dart:async';
 import 'package:window_manager/window_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 
 const SIZE = Size(400, 400);
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
+  WindowManager.instance.setTitleBarStyle(TitleBarStyle.hidden);
   WindowManager.instance.setMinimumSize(SIZE);
   WindowManager.instance.setMaximumSize(SIZE);
   WindowManager.instance.setSize(SIZE);
@@ -76,7 +78,25 @@ class _DesktopDragonState extends State<DesktopDragon> {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Desktop Dragon')),
+        appBar: AppBar(
+          title: const Text('Desktop Dragon'),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.settings),
+              tooltip: 'Show Settings',
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.close),
+              tooltip: 'Close The App',
+              onPressed: () {
+                //save the app
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+              },
+            ),
+          ],
+        ),
+
         body: Center(
           child: Builder(
             builder: (context) {
