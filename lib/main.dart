@@ -2,8 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:date_format/date_format.dart';
 import 'dart:async';
+import 'package:window_manager/window_manager.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
+
+const SIZE = Size(400, 400);
+
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await windowManager.ensureInitialized();
+  WindowManager.instance.setTitleBarStyle(TitleBarStyle.hidden);
+  WindowManager.instance.setMinimumSize(SIZE);
+  WindowManager.instance.setMaximumSize(SIZE);
+  WindowManager.instance.setSize(SIZE);
   runApp(DesktopDragon());
 }
 
@@ -48,9 +60,45 @@ class _DesktopDragonState extends State<DesktopDragon> {
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Root widget
+      title: 'Desktop Dragon',
+      theme: ThemeData(
+        // Define the default brightness and colors.
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 3, 3, 3),
+          // ···
+          brightness: Brightness.dark,
+        ),
+
+        // Define the default `TextTheme`. Use this to specify the default
+        // text styling for headlines, titles, bodies of text, and more.
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(fontSize: 72),
+          // ···
+          titleLarge: GoogleFonts.getFont('IBM Plex Mono'),
+          bodyMedium: GoogleFonts.getFont('IBM Plex Mono'),
+          displaySmall: GoogleFonts.getFont('IBM Plex Mono'),
+        ),
+      ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Desktop Dragon')),
+        appBar: AppBar(
+          title: const Text('Desktop Dragon'),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.settings),
+              tooltip: 'Show Settings',
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.close),
+              tooltip: 'Close The App',
+              onPressed: () {
+                //save the app
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+              },
+            ),
+          ],
+        ),
+
         body: Center(
           child: Builder(
             builder: (context) {
@@ -63,7 +111,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
                       Text(labelTime),
                       const SizedBox(width: 50),
                       Text(
-                        '  ^^     /======>\n (00)   /      /\n@@=====>\n    J        J',
+                        '  ^^     /=====/\n (00)   /     /\n@@=============\\\n    J      J   V',
                       ),
                     ],
                   ),
