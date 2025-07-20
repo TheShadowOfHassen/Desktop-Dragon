@@ -208,13 +208,13 @@ build /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/e
 #############################################
 # Order-only phony target for desktop_dragon
 
-build cmake_object_order_depends_target_desktop_dragon: phony || cmake_object_order_depends_target_url_launcher_linux_plugin flutter/flutter_assemble
+build cmake_object_order_depends_target_desktop_dragon: phony || cmake_object_order_depends_target_screen_retriever_linux_plugin cmake_object_order_depends_target_url_launcher_linux_plugin cmake_object_order_depends_target_window_manager_plugin flutter/flutter_assemble
 
 build runner/CMakeFiles/desktop_dragon.dir/main.cc.o: CXX_COMPILER__desktop_dragon_unscanned_Debug /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/runner/main.cc || cmake_object_order_depends_target_desktop_dragon
   DEFINES = -DAPPLICATION_ID=\"com.example.desktop_dragon\"
   DEP_FILE = runner/CMakeFiles/desktop_dragon.dir/main.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
+  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux/include -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
   OBJECT_DIR = runner/CMakeFiles/desktop_dragon.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/desktop_dragon.dir
 
@@ -222,7 +222,7 @@ build runner/CMakeFiles/desktop_dragon.dir/my_application.cc.o: CXX_COMPILER__de
   DEFINES = -DAPPLICATION_ID=\"com.example.desktop_dragon\"
   DEP_FILE = runner/CMakeFiles/desktop_dragon.dir/my_application.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
+  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux/include -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
   OBJECT_DIR = runner/CMakeFiles/desktop_dragon.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/desktop_dragon.dir
 
@@ -230,7 +230,7 @@ build runner/CMakeFiles/desktop_dragon.dir/__/flutter/generated_plugin_registran
   DEFINES = -DAPPLICATION_ID=\"com.example.desktop_dragon\"
   DEP_FILE = runner/CMakeFiles/desktop_dragon.dir/__/flutter/generated_plugin_registrant.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
+  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux/include -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/include -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux/include -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
   OBJECT_DIR = runner/CMakeFiles/desktop_dragon.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/desktop_dragon.dir/__/flutter
 
@@ -242,9 +242,9 @@ build runner/CMakeFiles/desktop_dragon.dir/__/flutter/generated_plugin_registran
 #############################################
 # Link the executable intermediates_do_not_run/desktop_dragon
 
-build intermediates_do_not_run/desktop_dragon: CXX_EXECUTABLE_LINKER__desktop_dragon_Debug runner/CMakeFiles/desktop_dragon.dir/main.cc.o runner/CMakeFiles/desktop_dragon.dir/my_application.cc.o runner/CMakeFiles/desktop_dragon.dir/__/flutter/generated_plugin_registrant.cc.o | plugins/url_launcher_linux/liburl_launcher_linux_plugin.so /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/x86_64-linux-gnu/libgtk-3.so /usr/lib/x86_64-linux-gnu/libgdk-3.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so /usr/lib/x86_64-linux-gnu/libpango-1.0.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libatk-1.0.so /usr/lib/x86_64-linux-gnu/libcairo-gobject.so /usr/lib/x86_64-linux-gnu/libcairo.so /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so /usr/lib/x86_64-linux-gnu/libgio-2.0.so /usr/lib/x86_64-linux-gnu/libgobject-2.0.so /usr/lib/x86_64-linux-gnu/libglib-2.0.so || flutter/flutter_assemble plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
+build intermediates_do_not_run/desktop_dragon: CXX_EXECUTABLE_LINKER__desktop_dragon_Debug runner/CMakeFiles/desktop_dragon.dir/main.cc.o runner/CMakeFiles/desktop_dragon.dir/my_application.cc.o runner/CMakeFiles/desktop_dragon.dir/__/flutter/generated_plugin_registrant.cc.o | plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so plugins/url_launcher_linux/liburl_launcher_linux_plugin.so plugins/window_manager/libwindow_manager_plugin.so /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/x86_64-linux-gnu/libgtk-3.so /usr/lib/x86_64-linux-gnu/libgdk-3.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so /usr/lib/x86_64-linux-gnu/libpango-1.0.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libatk-1.0.so /usr/lib/x86_64-linux-gnu/libcairo-gobject.so /usr/lib/x86_64-linux-gnu/libcairo.so /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so /usr/lib/x86_64-linux-gnu/libgio-2.0.so /usr/lib/x86_64-linux-gnu/libgobject-2.0.so /usr/lib/x86_64-linux-gnu/libglib-2.0.so || flutter/flutter_assemble plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so plugins/url_launcher_linux/liburl_launcher_linux_plugin.so plugins/window_manager/libwindow_manager_plugin.so
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux:/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral:  plugins/url_launcher_linux/liburl_launcher_linux_plugin.so  /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/x86_64-linux-gnu/libgtk-3.so  /usr/lib/x86_64-linux-gnu/libgdk-3.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  /usr/lib/x86_64-linux-gnu/libpango-1.0.so  /usr/lib/x86_64-linux-gnu/libharfbuzz.so  /usr/lib/x86_64-linux-gnu/libatk-1.0.so  /usr/lib/x86_64-linux-gnu/libcairo-gobject.so  /usr/lib/x86_64-linux-gnu/libcairo.so  /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so  /usr/lib/x86_64-linux-gnu/libgio-2.0.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux:/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux:/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager:/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral:  plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so  plugins/url_launcher_linux/liburl_launcher_linux_plugin.so  plugins/window_manager/libwindow_manager_plugin.so  /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/x86_64-linux-gnu/libgtk-3.so  /usr/lib/x86_64-linux-gnu/libgdk-3.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  /usr/lib/x86_64-linux-gnu/libpango-1.0.so  /usr/lib/x86_64-linux-gnu/libharfbuzz.so  /usr/lib/x86_64-linux-gnu/libatk-1.0.so  /usr/lib/x86_64-linux-gnu/libcairo-gobject.so  /usr/lib/x86_64-linux-gnu/libcairo.so  /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so  /usr/lib/x86_64-linux-gnu/libgio-2.0.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so
   OBJECT_DIR = runner/CMakeFiles/desktop_dragon.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -315,6 +315,112 @@ build runner/CMakeFiles/install/strip.util: CUSTOM_COMMAND runner/all
   restat = 1
 
 build runner/install/strip: phony runner/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/generated_plugins.cmake
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target screen_retriever_linux_plugin
+
+
+#############################################
+# Order-only phony target for screen_retriever_linux_plugin
+
+build cmake_object_order_depends_target_screen_retriever_linux_plugin: phony || flutter/flutter_assemble
+
+build plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir/screen_retriever_linux_plugin.cc.o: CXX_COMPILER__screen_retriever_linux_plugin_unscanned_Debug /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux/screen_retriever_linux_plugin.cc || cmake_object_order_depends_target_screen_retriever_linux_plugin
+  DEFINES = -DFLUTTER_PLUGIN_IMPL -Dscreen_retriever_linux_plugin_EXPORTS
+  DEP_FILE = plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir/screen_retriever_linux_plugin.cc.o.d
+  FLAGS = -g -fPIC -fvisibility=hidden -Wall -Werror -pthread
+  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
+  OBJECT_DIR = plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir
+  OBJECT_FILE_DIR = plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target screen_retriever_linux_plugin
+
+
+#############################################
+# Link the shared library plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so
+
+build plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so: CXX_SHARED_LIBRARY_LINKER__screen_retriever_linux_plugin_Debug plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir/screen_retriever_linux_plugin.cc.o | /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/x86_64-linux-gnu/libgtk-3.so /usr/lib/x86_64-linux-gnu/libgdk-3.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so /usr/lib/x86_64-linux-gnu/libpango-1.0.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libatk-1.0.so /usr/lib/x86_64-linux-gnu/libcairo-gobject.so /usr/lib/x86_64-linux-gnu/libcairo.so /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so /usr/lib/x86_64-linux-gnu/libgio-2.0.so /usr/lib/x86_64-linux-gnu/libgobject-2.0.so /usr/lib/x86_64-linux-gnu/libglib-2.0.so || flutter/flutter_assemble
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral  /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/x86_64-linux-gnu/libgtk-3.so  /usr/lib/x86_64-linux-gnu/libgdk-3.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  /usr/lib/x86_64-linux-gnu/libpango-1.0.so  /usr/lib/x86_64-linux-gnu/libharfbuzz.so  /usr/lib/x86_64-linux-gnu/libatk-1.0.so  /usr/lib/x86_64-linux-gnu/libcairo-gobject.so  /usr/lib/x86_64-linux-gnu/libcairo.so  /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so  /usr/lib/x86_64-linux-gnu/libgio-2.0.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so
+  OBJECT_DIR = plugins/screen_retriever_linux/CMakeFiles/screen_retriever_linux_plugin.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libscreen_retriever_linux_plugin.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so
+  TARGET_PDB = screen_retriever_linux_plugin.so.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build plugins/screen_retriever_linux/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build plugins/screen_retriever_linux/edit_cache: phony plugins/screen_retriever_linux/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build plugins/screen_retriever_linux/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux && /usr/bin/cmake --regenerate-during-build -S/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -B/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build plugins/screen_retriever_linux/rebuild_cache: phony plugins/screen_retriever_linux/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build plugins/screen_retriever_linux/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build plugins/screen_retriever_linux/CMakeFiles/install.util: CUSTOM_COMMAND plugins/screen_retriever_linux/all
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build plugins/screen_retriever_linux/install: phony plugins/screen_retriever_linux/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build plugins/screen_retriever_linux/CMakeFiles/install/local.util: CUSTOM_COMMAND plugins/screen_retriever_linux/all
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build plugins/screen_retriever_linux/install/local: phony plugins/screen_retriever_linux/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build plugins/screen_retriever_linux/CMakeFiles/install/strip.util: CUSTOM_COMMAND plugins/screen_retriever_linux/all
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build plugins/screen_retriever_linux/install/strip: phony plugins/screen_retriever_linux/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -431,15 +537,129 @@ build plugins/url_launcher_linux/CMakeFiles/install/strip.util: CUSTOM_COMMAND p
 build plugins/url_launcher_linux/install/strip: phony plugins/url_launcher_linux/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/generated_plugins.cmake
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target window_manager_plugin
+
+
+#############################################
+# Order-only phony target for window_manager_plugin
+
+build cmake_object_order_depends_target_window_manager_plugin: phony || flutter/flutter_assemble
+
+build plugins/window_manager/CMakeFiles/window_manager_plugin.dir/window_manager_plugin.cc.o: CXX_COMPILER__window_manager_plugin_unscanned_Debug /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux/window_manager_plugin.cc || cmake_object_order_depends_target_window_manager_plugin
+  DEFINES = -DFLUTTER_PLUGIN_IMPL -Dwindow_manager_plugin_EXPORTS
+  DEP_FILE = plugins/window_manager/CMakeFiles/window_manager_plugin.dir/window_manager_plugin.cc.o.d
+  FLAGS = -g -fPIC -fvisibility=hidden -Wall -Werror -pthread
+  INCLUDES = -I/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include -isystem /usr/include/libei-1.0
+  OBJECT_DIR = plugins/window_manager/CMakeFiles/window_manager_plugin.dir
+  OBJECT_FILE_DIR = plugins/window_manager/CMakeFiles/window_manager_plugin.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target window_manager_plugin
+
+
+#############################################
+# Link the shared library plugins/window_manager/libwindow_manager_plugin.so
+
+build plugins/window_manager/libwindow_manager_plugin.so: CXX_SHARED_LIBRARY_LINKER__window_manager_plugin_Debug plugins/window_manager/CMakeFiles/window_manager_plugin.dir/window_manager_plugin.cc.o | /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/x86_64-linux-gnu/libgtk-3.so /usr/lib/x86_64-linux-gnu/libgdk-3.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so /usr/lib/x86_64-linux-gnu/libpango-1.0.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libatk-1.0.so /usr/lib/x86_64-linux-gnu/libcairo-gobject.so /usr/lib/x86_64-linux-gnu/libcairo.so /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so /usr/lib/x86_64-linux-gnu/libgio-2.0.so /usr/lib/x86_64-linux-gnu/libgobject-2.0.so /usr/lib/x86_64-linux-gnu/libglib-2.0.so || flutter/flutter_assemble
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -Wl,-rpath,/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral  /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/x86_64-linux-gnu/libgtk-3.so  /usr/lib/x86_64-linux-gnu/libgdk-3.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  /usr/lib/x86_64-linux-gnu/libpango-1.0.so  /usr/lib/x86_64-linux-gnu/libharfbuzz.so  /usr/lib/x86_64-linux-gnu/libatk-1.0.so  /usr/lib/x86_64-linux-gnu/libcairo-gobject.so  /usr/lib/x86_64-linux-gnu/libcairo.so  /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so  /usr/lib/x86_64-linux-gnu/libgio-2.0.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so
+  OBJECT_DIR = plugins/window_manager/CMakeFiles/window_manager_plugin.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libwindow_manager_plugin.so
+  SONAME_FLAG = -Wl,-soname,
+  TARGET_FILE = plugins/window_manager/libwindow_manager_plugin.so
+  TARGET_PDB = window_manager_plugin.so.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build plugins/window_manager/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build plugins/window_manager/edit_cache: phony plugins/window_manager/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build plugins/window_manager/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager && /usr/bin/cmake --regenerate-during-build -S/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux -B/home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build plugins/window_manager/rebuild_cache: phony plugins/window_manager/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build plugins/window_manager/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build plugins/window_manager/CMakeFiles/install.util: CUSTOM_COMMAND plugins/window_manager/all
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build plugins/window_manager/install: phony plugins/window_manager/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build plugins/window_manager/CMakeFiles/install/local.util: CUSTOM_COMMAND plugins/window_manager/all
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build plugins/window_manager/install/local: phony plugins/window_manager/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build plugins/window_manager/CMakeFiles/install/strip.util: CUSTOM_COMMAND plugins/window_manager/all
+  COMMAND = cd /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build plugins/window_manager/install/strip: phony plugins/window_manager/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
 
 build desktop_dragon: phony intermediates_do_not_run/desktop_dragon
 
 build flutter_assemble: phony flutter/flutter_assemble
 
+build libscreen_retriever_linux_plugin.so: phony plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so
+
 build liburl_launcher_linux_plugin.so: phony plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
 
+build libwindow_manager_plugin.so: phony plugins/window_manager/libwindow_manager_plugin.so
+
+build screen_retriever_linux_plugin: phony plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so
+
 build url_launcher_linux_plugin: phony plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
+
+build window_manager_plugin: phony plugins/window_manager/libwindow_manager_plugin.so
 
 # =============================================================================
 # Folder targets.
@@ -449,7 +669,7 @@ build url_launcher_linux_plugin: phony plugins/url_launcher_linux/liburl_launche
 #############################################
 # Folder: /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug
 
-build all: phony flutter/all runner/all plugins/url_launcher_linux/all
+build all: phony flutter/all runner/all plugins/screen_retriever_linux/all plugins/url_launcher_linux/all plugins/window_manager/all
 
 # =============================================================================
 
@@ -461,9 +681,23 @@ build flutter/all: phony
 # =============================================================================
 
 #############################################
+# Folder: /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/screen_retriever_linux
+
+build plugins/screen_retriever_linux/all: phony plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so
+
+# =============================================================================
+
+#############################################
 # Folder: /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/url_launcher_linux
 
 build plugins/url_launcher_linux/all: phony plugins/url_launcher_linux/liburl_launcher_linux_plugin.so
+
+# =============================================================================
+
+#############################################
+# Folder: /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/build/linux/x64/debug/plugins/window_manager
+
+build plugins/window_manager/all: phony plugins/window_manager/libwindow_manager_plugin.so
 
 # =============================================================================
 
@@ -479,14 +713,14 @@ build runner/all: phony intermediates_do_not_run/desktop_dragon
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/generated_config.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/generated_plugins.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/generated_config.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/generated_plugins.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/generated_config.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/generated_plugins.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux/CMakeLists.txt /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/ephemeral/generated_config.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/flutter/generated_plugins.cmake /home/nathanaelstottlemyer/Documents/GitHub/Desktop-Dragon/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################

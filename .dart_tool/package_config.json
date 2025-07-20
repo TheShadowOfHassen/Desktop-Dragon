@@ -110,6 +110,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "json_annotation",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/json_annotation-4.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/leak_tracker-10.0.9",
       "packageUri": "lib/",
@@ -202,6 +208,36 @@
     {
       "name": "plugin_platform_interface",
       "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "screen_retriever",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/screen_retriever-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "screen_retriever_linux",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "screen_retriever_macos",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "screen_retriever_platform_interface",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/screen_retriever_platform_interface-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "screen_retriever_windows",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -360,6 +396,12 @@
       "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/web-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "window_manager",
+      "rootUri": "file:///home/nathanaelstottlemyer/.pub-cache/hosted/pub.dev/window_manager-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "xdg_directories",
