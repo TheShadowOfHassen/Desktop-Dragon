@@ -57,17 +57,6 @@ var data = [
   ],
 ];
 
-var buttonOne = 'Button One';
-var buttonOneWebsites = ['https://github.com/'];
-var buttonTwo = 'Button Two';
-var buttonTwoWebsites = [
-  'https://www.gamingonlinux.com/',
-  'https://www.gamingonlinux.com/',
-  'https://itsfoss.com/',
-];
-var buttonThree = 'MUSIC';
-var buttonThreeWebsites = ['https://open.spotify.com/'];
-
 class DesktopDragon extends StatefulWidget {
   const DesktopDragon({super.key});
 
@@ -88,6 +77,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
   @override
   void initState() {
     super.initState();
+    labelTime = updateClock();
     // Update every second
     _timer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
