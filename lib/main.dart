@@ -8,11 +8,11 @@ import 'package:flutter/services.dart';
 
 const SIZE = Size(400, 400);
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
-  WindowManager.instance.setTitleBarStyle(TitleBarStyle.hidden);
+  //WindowManager.instance.setTitleBarStyle(TitleBarStyle.hidden);
+  // This needs to be hidden so we can drag it around
   WindowManager.instance.setMinimumSize(SIZE);
   WindowManager.instance.setMaximumSize(SIZE);
   WindowManager.instance.setSize(SIZE);
@@ -61,6 +61,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Desktop Dragon',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Define the default brightness and colors.
         colorScheme: ColorScheme.fromSeed(
