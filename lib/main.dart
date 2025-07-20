@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:date_format/date_format.dart';
 import 'dart:async';
+<<<<<<< Updated upstream
 import 'package:window_manager/window_manager.dart';
 
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
+=======
+import 'package:google_fonts/google_fonts.dart';
+>>>>>>> Stashed changes
 
 void main() async {
   runApp(DesktopDragon());
@@ -52,7 +56,25 @@ class _DesktopDragonState extends State<DesktopDragon> {
 
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Root widget
+      title: 'Desktop Dragon',
+      theme: ThemeData(
+        // Define the default brightness and colors.
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 3, 3, 3),
+          // ···
+          brightness: Brightness.dark,
+        ),
+
+        // Define the default `TextTheme`. Use this to specify the default
+        // text styling for headlines, titles, bodies of text, and more.
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(fontSize: 72),
+          // ···
+          titleLarge: GoogleFonts.getFont('IBM Plex Mono'),
+          bodyMedium: GoogleFonts.getFont('IBM Plex Mono'),
+          displaySmall: GoogleFonts.getFont('IBM Plex Mono'),
+        ),
+      ),
       home: Scaffold(
         appBar: AppBar(title: const Text('Desktop Dragon')),
         body: Center(
@@ -67,7 +89,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
                       Text(labelTime),
                       const SizedBox(width: 50),
                       Text(
-                        '  ^^     /======>\n (00)   /      /\n@@=====>\n    J        J',
+                        '  ^^     /=====/\n (00)   /     /\n@@=============\\\n    J      J   V',
                       ),
                     ],
                   ),

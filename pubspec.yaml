@@ -7,9 +7,11 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  adaptive_theme: ^3.7.0
   date_format: ^2.0.9
   flutter:
     sdk: flutter
+  google_fonts: ^6.2.1
   url_launcher: ^6.3.2
 
 dev_dependencies:
