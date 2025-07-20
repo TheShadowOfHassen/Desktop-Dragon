@@ -5,21 +5,13 @@ import 'dart:async';
 import 'package:window_manager/window_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+const SIZE = Size(400, 400);
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
-  WindowManager.instance.setMinimumSize(const Size(400, 400));
-  WindowManager.instance.setMaximumSize(const Size(400, 400));
-  WindowOptions windowOptions = const WindowOptions(
-    size: Size(400, 400),
-    backgroundColor: Colors.transparent,
-    skipTaskbar: false,
-    windowButtonVisibility: false,
-  );
-  windowManager.waitUntilReadyToShow(windowOptions, () async {
-    await windowManager.show();
-    await windowManager.focus();
-  });
+  WindowManager.instance.setMinimumSize(SIZE);
+  WindowManager.instance.setMaximumSize(SIZE);
+  WindowManager.instance.setSize(SIZE);
   runApp(DesktopDragon());
 }
 
