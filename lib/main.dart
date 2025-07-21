@@ -245,6 +245,30 @@ Future<List> getSettingsData() async {
   return data;
 }
 
+Future<void> saveSettings(data) async {
+  //Labels
+  String button_oneLabel = data[0][0];
+  String button_twoLabel = data[1][0];
+  String button_threeLabel = data[2][0];
+  //Lists
+  List<String> button_oneList = data[0][1];
+  List<String> button_twoList = data[1][1];
+  List<String> button_threeList = data[1][1];
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  //Save Labels
+  await prefs.setString('button_oneLabel', button_oneLabel);
+  await prefs.setString('button_twoLabel', button_twoLabel);
+  await prefs.setString('button_threeLabel', button_threeLabel);
+  // Save Lists;
+  await prefs.setStringList('button_oneList', button_oneList);
+  await prefs.setStringList('button_twoList', button_twoList);
+  await prefs.setStringList('button_threeList', button_threeList);
+
+  //await prefs.setString('action', 'Start');
+  // Save an list of strings to 'items' key.
+  //await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
+}
+
 Future<void> _showMyDialog(context) async {
   return showDialog<void>(
     context: context,
