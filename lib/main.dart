@@ -77,6 +77,19 @@ class _DesktopDragonState extends State<DesktopDragon> {
   @override
   void initState() {
     super.initState();
+    // load app settings
+    getSettingsData().then((tempdata) {
+      var settingdata = tempdata;
+      ButtonOneLabel = settingdata[0][0];
+      ButtonOneList = settingdata[0][1];
+      ButtonTwoLabel = settingdata[1][0];
+      ButtonTwoList = settingdata[1][1];
+      ButtonThreeLabel = settingdata[2][0];
+      ButtonThreeList = settingdata[2][1];
+
+      // future is completed you can perform your task
+    });
+
     labelTime = updateClock();
     // Update every second
     _timer = Timer.periodic(Duration(seconds: 1), (timer) {
@@ -101,12 +114,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
             icon: const Icon(Icons.settings),
             tooltip: 'Show Settings',
             onPressed: () {
-              getSettingsData().then((tempdata) {
-                var settingdata = tempdata;
-                ButtonOneLabel = settingdata[0];
-                // future is completed you can perform your task
-              });
-              //_showMyDialog(context);
+              _showMyDialog(context);
             },
           ),
           IconButton(
@@ -114,7 +122,14 @@ class _DesktopDragonState extends State<DesktopDragon> {
             tooltip: 'Close The App',
             onPressed: () {
               //save the app
-              SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+              var save_data = [
+                [ButtonOneLabel, ButtonOneList],
+                [ButtonTwoLabel, ButtonTwoList],
+                [ButtonThreeLabel, ButtonThreeList],
+              ];
+              saveSettings(save_data).then((tempdata) {
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+              });
             },
           ),
         ],
@@ -263,7 +278,7 @@ Future<void> saveSettings(data) async {
   await prefs.setStringList('button_oneList', button_oneList);
   await prefs.setStringList('button_twoList', button_twoList);
   await prefs.setStringList('button_threeList', button_threeList);
-
+  print('mongoose');
   //await prefs.setString('action', 'Start');
   // Save an list of strings to 'items' key.
   //await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
