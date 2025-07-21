@@ -73,7 +73,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
   String ButtonThreeLabel = '';
   List ButtonThreeList = [];
   Timer? _timer;
-
+  List settingdata = [];
   @override
   void initState() {
     super.initState();
@@ -101,7 +101,12 @@ class _DesktopDragonState extends State<DesktopDragon> {
             icon: const Icon(Icons.settings),
             tooltip: 'Show Settings',
             onPressed: () {
-              _showMyDialog(context);
+              getSettingsData().then((tempdata) {
+                var settingdata = tempdata;
+                ButtonOneLabel = settingdata[0];
+                // future is completed you can perform your task
+              });
+              //_showMyDialog(context);
             },
           ),
           IconButton(
@@ -182,11 +187,11 @@ class _DesktopDragonState extends State<DesktopDragon> {
       ', ',
       yyyy,
       '\n',
-      h,
+      hh,
       ':',
-      n,
+      nn,
       ':',
-      s,
+      ss,
       '  ',
       am,
     ]);
@@ -194,7 +199,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
   }
 }
 
-Future<List> getData() async {
+Future<List> getSettingsData() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   // For the first button
   String? button_oneLabel = prefs.getString('button_oneLabel');
@@ -204,7 +209,7 @@ Future<List> getData() async {
   ;
   List<String>? button_oneList = prefs.getStringList('button_oneList');
   if (button_oneList == null) {
-    var button_oneList = <String>['github.com'];
+    button_oneList = <String>['github.com'];
   }
   ;
   // For the second button
@@ -215,7 +220,7 @@ Future<List> getData() async {
   ;
   List<String>? button_twoList = prefs.getStringList('button_twoList');
   if (button_twoList == null) {
-    var button_twoList = <String>[
+    button_twoList = <String>[
       'https://ubuntu-flutter-community.github.io/website/',
     ];
   }
