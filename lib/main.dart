@@ -17,6 +17,7 @@ void main() async {
   WindowManager.instance.setMinimumSize(SIZE);
   WindowManager.instance.setMaximumSize(SIZE);
   WindowManager.instance.setSize(SIZE);
+  await windowManager.setTitle('Roar!!!');
   runApp(
     MaterialApp(
       title: 'Desktop Dragon',
@@ -41,21 +42,6 @@ void main() async {
     ),
   );
 }
-
-var data = [
-  [
-    'Button One',
-    ['https://github.com/'],
-  ],
-  [
-    'Button Two',
-    ['https://www.gamingonlinux.com/'],
-  ],
-  [
-    'Music',
-    ['open.spotify.com'],
-  ],
-];
 
 class DesktopDragon extends StatefulWidget {
   const DesktopDragon({super.key});
