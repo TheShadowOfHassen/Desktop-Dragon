@@ -78,17 +78,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
   void initState() {
     super.initState();
     // load app settings
-    getSettingsData().then((tempdata) {
-      var settingdata = tempdata;
-      ButtonOneLabel = settingdata[0][0];
-      ButtonOneList = settingdata[0][1];
-      ButtonTwoLabel = settingdata[1][0];
-      ButtonTwoList = settingdata[1][1];
-      ButtonThreeLabel = settingdata[2][0];
-      ButtonThreeList = settingdata[2][1];
-
-      // future is completed you can perform your task
-    });
+    getSettingsData();
 
     labelTime = updateClock();
     // Update every second
@@ -105,7 +95,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
     super.dispose();
   }
 
-  Future<void> ShowSettingsDialog(context, settingdata) async {
+  Future<void> ShowSettingsDialog(context) async {
     //Name controlers
     var ButtonOneNameControler = TextEditingController();
     var ButtonTwoNameControler = TextEditingController();
@@ -115,12 +105,12 @@ class _DesktopDragonState extends State<DesktopDragon> {
     var ButtonTwoUrlControler = TextEditingController();
     var ButtonThreeUrlControler = TextEditingController();
 
-    ButtonOneNameControler.text = settingdata[0][0];
-    ButtonOneUrlControler.text = settingdata[0][1].join(',');
-    ButtonTwoNameControler.text = settingdata[1][0];
-    ButtonTwoUrlControler.text = settingdata[1][1].join(',');
-    ButtonThreeNameControler.text = settingdata[2][0];
-    ButtonTwoUrlControler.text = settingdata[2][1].join(',');
+    ButtonOneNameControler.text = ButtonOneLabel;
+    ButtonOneUrlControler.text = ButtonOneList.join(',');
+    ButtonTwoNameControler.text = ButtonTwoLabel;
+    ButtonTwoUrlControler.text = ButtonTwoList.join(',');
+    ButtonThreeNameControler.text = ButtonThreeLabel;
+    ButtonTwoUrlControler.text = ButtonTwoList.join(',');
 
     showDialog(
       context: context,
@@ -217,8 +207,14 @@ class _DesktopDragonState extends State<DesktopDragon> {
                 ButtonOneList = ButtonOneUrlControler.text.split(',');
                 ButtonTwoLabel = ButtonTwoNameControler.text;
                 ButtonTwoList = ButtonTwoUrlControler.text.split(',');
-                ButtonThreeLabel = ButtonTwoNameControler.text;
-                ButtonThreeList = ButtonTwoUrlControler.text.split(',');
+                ButtonThreeLabel = ButtonThreeNameControler.text;
+                ButtonThreeList = ButtonThreeUrlControler.text.split(',');
+                var save_data = [
+                  [ButtonOneLabel, ButtonOneList],
+                  [ButtonTwoLabel, ButtonTwoList],
+                  [ButtonThreeLabel, ButtonThreeList],
+                ];
+                saveSettings(save_data);
                 Navigator.of(context).pop();
               },
             ),
@@ -226,6 +222,74 @@ class _DesktopDragonState extends State<DesktopDragon> {
         );
       },
     );
+  }
+
+  Future<void> getSettingsData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    // For the first button
+    String? button_oneLabel = prefs.getString('button_oneLabel');
+    if (button_oneLabel == null) {
+      button_oneLabel = 'Button One';
+    }
+    ;
+    List<String>? button_oneList = prefs.getStringList('button_oneList');
+    if (button_oneList == null) {
+      button_oneList = <String>['github.com'];
+    }
+    ;
+    // For the second button
+    String? button_twoLabel = prefs.getString('button_twoLabel');
+    if (button_twoLabel == null) {
+      button_twoLabel = 'Button Two';
+    }
+    ;
+    List<String>? button_twoList = prefs.getStringList('button_twoList');
+    if (button_twoList == null) {
+      button_twoList = <String>[
+        'https://ubuntu-flutter-community.github.io/website/',
+      ];
+    }
+    ;
+    // For the third button
+    String? button_threeLabel = prefs.getString('button_threeLabel');
+    if (button_threeLabel == null) {
+      button_threeLabel = 'Button Three';
+    }
+    ;
+    List<String>? button_threeList = prefs.getStringList('button_threeList');
+    if (button_threeList == null) {
+      button_threeList = <String>['https://github.com/TheShadowOfHassen'];
+    }
+    ;
+    ButtonOneLabel = button_oneLabel;
+    ButtonOneList = button_oneList;
+    ButtonTwoLabel = button_twoLabel;
+    ButtonTwoList = button_twoList;
+    ButtonThreeLabel = button_threeLabel;
+    ButtonThreeList = button_threeList;
+  }
+
+  Future<void> saveSettings(data) async {
+    //Labels
+    String button_oneLabel = data[0][0];
+    String button_twoLabel = data[1][0];
+    String button_threeLabel = data[2][0];
+    //Lists
+    List<String> button_oneList = data[0][1];
+    List<String> button_twoList = data[1][1];
+    List<String> button_threeList = data[1][1];
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    //Save Labels
+    await prefs.setString('button_oneLabel', button_oneLabel);
+    await prefs.setString('button_twoLabel', button_twoLabel);
+    await prefs.setString('button_threeLabel', button_threeLabel);
+    // Save Lists;
+    await prefs.setStringList('button_oneList', button_oneList);
+    await prefs.setStringList('button_twoList', button_twoList);
+    await prefs.setStringList('button_threeList', button_threeList);
+    //await prefs.setString('action', 'Start');
+    // Save an list of strings to 'items' key.
+    //await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
   }
 
   Widget build(BuildContext context) {
@@ -237,12 +301,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
             icon: const Icon(Icons.settings),
             tooltip: 'Show Settings',
             onPressed: () {
-              var save_data = [
-                [ButtonOneLabel, ButtonOneList],
-                [ButtonTwoLabel, ButtonTwoList],
-                [ButtonThreeLabel, ButtonThreeList],
-              ];
-              ShowSettingsDialog(context, save_data);
+              ShowSettingsDialog(context);
             },
           ),
           IconButton(
@@ -340,74 +399,4 @@ class _DesktopDragonState extends State<DesktopDragon> {
     ]);
     return time;
   }
-}
-
-Future<List> getSettingsData() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  // For the first button
-  String? button_oneLabel = prefs.getString('button_oneLabel');
-  if (button_oneLabel == null) {
-    button_oneLabel = 'Button One';
-  }
-  ;
-  List<String>? button_oneList = prefs.getStringList('button_oneList');
-  if (button_oneList == null) {
-    button_oneList = <String>['github.com'];
-  }
-  ;
-  // For the second button
-  String? button_twoLabel = prefs.getString('button_twoLabel');
-  if (button_twoLabel == null) {
-    button_twoLabel = 'Button Two';
-  }
-  ;
-  List<String>? button_twoList = prefs.getStringList('button_twoList');
-  if (button_twoList == null) {
-    button_twoList = <String>[
-      'https://ubuntu-flutter-community.github.io/website/',
-    ];
-  }
-  ;
-  // For the third button
-  String? button_threeLabel = prefs.getString('button_threeLabel');
-  if (button_threeLabel == null) {
-    button_threeLabel = 'Button Three';
-  }
-  ;
-  List<String>? button_threeList = prefs.getStringList('button_threeList');
-  if (button_threeList == null) {
-    button_threeList = <String>['https://github.com/TheShadowOfHassen'];
-  }
-  ;
-
-  var data = [
-    [button_oneLabel, button_oneList],
-    [button_twoLabel, button_twoList],
-    [button_threeLabel, button_threeList],
-  ];
-  return data;
-}
-
-Future<void> saveSettings(data) async {
-  //Labels
-  print(data);
-  String button_oneLabel = data[0][0];
-  String button_twoLabel = data[1][0];
-  String button_threeLabel = data[2][0];
-  //Lists
-  List<String> button_oneList = data[0][1];
-  List<String> button_twoList = data[1][1];
-  List<String> button_threeList = data[1][1];
-  final SharedPreferences prefs = await SharedPreferences.getInstance();
-  //Save Labels
-  await prefs.setString('button_oneLabel', button_oneLabel);
-  await prefs.setString('button_twoLabel', button_twoLabel);
-  await prefs.setString('button_threeLabel', button_threeLabel);
-  // Save Lists;
-  await prefs.setStringList('button_oneList', button_oneList);
-  await prefs.setStringList('button_twoList', button_twoList);
-  await prefs.setStringList('button_threeList', button_threeList);
-  //await prefs.setString('action', 'Start');
-  // Save an list of strings to 'items' key.
-  //await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
 }
