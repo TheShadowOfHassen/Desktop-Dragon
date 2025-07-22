@@ -49,11 +49,11 @@ gtk_window_set_icon_from_file(GTK_WINDOW(window), iconPath.c_str(), NULL);
   if (use_header_bar) {
     GtkHeaderBar* header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
     gtk_widget_show(GTK_WIDGET(header_bar));
-    gtk_header_bar_set_title(header_bar, "desktop_dragon");
+    gtk_header_bar_set_title(header_bar, "Desktop Dragon");
     gtk_header_bar_set_show_close_button(header_bar, TRUE);
     gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
   } else {
-    gtk_window_set_title(window, "desktop_dragon");
+    gtk_window_set_title(window, "Desktop Dragon");
   }
 
   gtk_window_set_default_size(window, 1280, 720);
