@@ -105,6 +105,129 @@ class _DesktopDragonState extends State<DesktopDragon> {
     super.dispose();
   }
 
+  Future<void> ShowSettingsDialog(context, settingdata) async {
+    //Name controlers
+    var ButtonOneNameControler = TextEditingController();
+    var ButtonTwoNameControler = TextEditingController();
+    var ButtonThreeNameControler = TextEditingController();
+    // URL Controllers
+    var ButtonOneUrlControler = TextEditingController();
+    var ButtonTwoUrlControler = TextEditingController();
+    var ButtonThreeUrlControler = TextEditingController();
+
+    ButtonOneNameControler.text = settingdata[0][0];
+    ButtonOneUrlControler.text = settingdata[0][1].join(',');
+    ButtonTwoNameControler.text = settingdata[1][0];
+    ButtonTwoUrlControler.text = settingdata[1][1].join(',');
+    ButtonThreeNameControler.text = settingdata[2][0];
+    ButtonTwoUrlControler.text = settingdata[2][1].join(',');
+
+    showDialog(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          scrollable: true,
+          title: const Text('Settings'),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text('Button Names:'),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Button 1 '),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(
+                        controller: ButtonOneNameControler,
+                        maxLength: 12,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Button 2'),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(
+                        controller: ButtonTwoNameControler,
+                        maxLength: 12,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Button 3'),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(
+                        controller: ButtonThreeNameControler,
+                        maxLength: 12,
+                      ),
+                    ),
+                  ],
+                ),
+                Text('Button URLS:'),
+                Text('Seperate with commas:'),
+                Text('I.E url1, url2'),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Button 1'),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(controller: ButtonOneUrlControler),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Button 2'),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(controller: ButtonTwoUrlControler),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('Button 3'),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: TextField(controller: ButtonThreeUrlControler),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Save'),
+              onPressed: () {
+                ButtonOneLabel = ButtonOneNameControler.text;
+                ButtonOneList = ButtonOneUrlControler.text.split(',');
+                ButtonTwoLabel = ButtonTwoNameControler.text;
+                ButtonTwoList = ButtonTwoUrlControler.text.split(',');
+                ButtonThreeLabel = ButtonTwoNameControler.text;
+                ButtonThreeList = ButtonTwoUrlControler.text.split(',');
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -114,7 +237,12 @@ class _DesktopDragonState extends State<DesktopDragon> {
             icon: const Icon(Icons.settings),
             tooltip: 'Show Settings',
             onPressed: () {
-              _showMyDialog(context);
+              var save_data = [
+                [ButtonOneLabel, ButtonOneList],
+                [ButtonTwoLabel, ButtonTwoList],
+                [ButtonThreeLabel, ButtonThreeList],
+              ];
+              ShowSettingsDialog(context, save_data);
             },
           ),
           IconButton(
@@ -262,6 +390,7 @@ Future<List> getSettingsData() async {
 
 Future<void> saveSettings(data) async {
   //Labels
+  print(data);
   String button_oneLabel = data[0][0];
   String button_twoLabel = data[1][0];
   String button_threeLabel = data[2][0];
@@ -278,38 +407,7 @@ Future<void> saveSettings(data) async {
   await prefs.setStringList('button_oneList', button_oneList);
   await prefs.setStringList('button_twoList', button_twoList);
   await prefs.setStringList('button_threeList', button_threeList);
-  print('mongoose');
   //await prefs.setString('action', 'Start');
   // Save an list of strings to 'items' key.
   //await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
-}
-
-Future<void> _showMyDialog(context) async {
-  return showDialog<void>(
-    context: context,
-    barrierDismissible: false, // user must tap button!
-    builder: (BuildContext context) {
-      return AlertDialog(
-        scrollable: true,
-        title: const Text('AlertDialog Title'),
-        content: const SingleChildScrollView(
-          child: ListBody(
-            children: <Widget>[
-              Row(children: [Text('Button One: Name'), TextField()]),
-              //Text('This is a demo alert dialog.'),
-              // Text('Would you like to approve of this message?'),
-            ],
-          ),
-        ),
-        actions: <Widget>[
-          TextButton(
-            child: const Text('Approve'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      );
-    },
-  );
 }
