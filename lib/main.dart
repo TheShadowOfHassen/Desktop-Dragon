@@ -296,8 +296,8 @@ Future<void> _showMyDialog(context) async {
           child: ListBody(
             children: <Widget>[
               Row(children: [Text('Button One: Name'), TextField()]),
-              Text('This is a demo alert dialog.'),
-              Text('Would you like to approve of this message?'),
+              //Text('This is a demo alert dialog.'),
+              // Text('Would you like to approve of this message?'),
             ],
           ),
         ),
