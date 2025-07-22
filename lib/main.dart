@@ -1,3 +1,6 @@
+//Desktop Dragon
+// Copyright 2025 ShadowOfHassen
+// This app is licensed under the GNU GPL 3.0
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:date_format/date_format.dart';
@@ -182,6 +185,16 @@ class _DesktopDragonState extends State<DesktopDragon> {
                     ),
                   ],
                 ),
+                const SizedBox(height: 20),
+                Text('Deskrop Dragon was made by:'),
+                Text('Shadow Of Hassen'),
+                InkWell(
+                  onTap: () => launchUrl(Uri.parse('https://github.com/TheShadowOfHassen/Desktop-Dragon')),
+                  child: Text(
+                    'Click Here for more info',
+                    style: TextStyle(decoration: TextDecoration.underline, color: Colors.blue),
+                  ),
+                ),
               ],
             ),
           ),
@@ -215,18 +228,18 @@ class _DesktopDragonState extends State<DesktopDragon> {
     // For the first button
     String? button_oneLabel = prefs.getString('button_oneLabel');
     if (button_oneLabel == null) {
-      button_oneLabel = 'Button One';
+      button_oneLabel = 'Github';
     }
     ;
     List<String>? button_oneList = prefs.getStringList('button_oneList');
     if (button_oneList == null) {
-      button_oneList = <String>['github.com'];
+      button_oneList = <String>['https://github.com'];
     }
     ;
     // For the second button
     String? button_twoLabel = prefs.getString('button_twoLabel');
     if (button_twoLabel == null) {
-      button_twoLabel = 'Button Two';
+      button_twoLabel = 'UFC';
     }
     ;
     List<String>? button_twoList = prefs.getStringList('button_twoList');
@@ -239,12 +252,12 @@ class _DesktopDragonState extends State<DesktopDragon> {
     // For the third button
     String? button_threeLabel = prefs.getString('button_threeLabel');
     if (button_threeLabel == null) {
-      button_threeLabel = 'Button Three';
+      button_threeLabel = 'News';
     }
     ;
     List<String>? button_threeList = prefs.getStringList('button_threeList');
     if (button_threeList == null) {
-      button_threeList = <String>['https://github.com/TheShadowOfHassen'];
+      button_threeList = <String>['https://www.gamingonlinux.com','https://itsfoss.com','https://www.omgubuntu.co.uk'];
     }
     ;
     ButtonOneLabel = button_oneLabel;
@@ -273,9 +286,6 @@ class _DesktopDragonState extends State<DesktopDragon> {
     await prefs.setStringList('button_oneList', button_oneList);
     await prefs.setStringList('button_twoList', button_twoList);
     await prefs.setStringList('button_threeList', button_threeList);
-    //await prefs.setString('action', 'Start');
-    // Save an list of strings to 'items' key.
-    //await prefs.setStringList('items', <String>['Earth', 'Moon', 'Sun']);
   }
 
   Widget build(BuildContext context) {
