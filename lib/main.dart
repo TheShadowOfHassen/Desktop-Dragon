@@ -215,12 +215,12 @@ class _DesktopDragonState extends State<DesktopDragon> {
                 ButtonTwoList = ButtonTwoUrlControler.text.split(',');
                 ButtonThreeLabel = ButtonThreeNameControler.text;
                 ButtonThreeList = ButtonThreeUrlControler.text.split(',');
-                var save_data = [
+                var saveData = [
                   [ButtonOneLabel, ButtonOneList],
                   [ButtonTwoLabel, ButtonTwoList],
                   [ButtonThreeLabel, ButtonThreeList],
                 ];
-                saveSettings(save_data);
+                saveSettings(saveData);
                 Navigator.of(context).pop();
               },
             ),
@@ -233,72 +233,67 @@ class _DesktopDragonState extends State<DesktopDragon> {
   Future<void> getSettingsData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     // For the first button
-    String? button_oneLabel = prefs.getString('button_oneLabel');
-    if (button_oneLabel == null) {
-      button_oneLabel = 'Github';
+    String? buttonOnelabel = prefs.getString('button_oneLabel');
+    if (buttonOnelabel == null) {
+      buttonOnelabel = 'Github';
     }
-    ;
-    List<String>? button_oneList = prefs.getStringList('button_oneList');
-    if (button_oneList == null) {
-      button_oneList = <String>['https://github.com'];
+    List<String>? buttonOnelist = prefs.getStringList('button_oneList');
+    if (buttonOnelist == null) {
+      buttonOnelist = <String>['https://github.com'];
     }
-    ;
     // For the second button
-    String? button_twoLabel = prefs.getString('button_twoLabel');
-    if (button_twoLabel == null) {
-      button_twoLabel = 'UFC';
+    String? buttonTwolabel = prefs.getString('button_twoLabel');
+    if (buttonTwolabel == null) {
+      buttonTwolabel = 'UFC';
     }
-    ;
-    List<String>? button_twoList = prefs.getStringList('button_twoList');
-    if (button_twoList == null) {
-      button_twoList = <String>[
+    List<String>? buttonTwolist = prefs.getStringList('button_twoList');
+    if (buttonTwolist == null) {
+      buttonTwolist = <String>[
         'https://ubuntu-flutter-community.github.io/website/',
       ];
     }
-    ;
     // For the third button
-    String? button_threeLabel = prefs.getString('button_threeLabel');
-    if (button_threeLabel == null) {
-      button_threeLabel = 'News';
+    String? buttonThreelabel = prefs.getString('button_threeLabel');
+    if (buttonThreelabel == null) {
+      buttonThreelabel = 'News';
     }
-    ;
-    List<String>? button_threeList = prefs.getStringList('button_threeList');
-    if (button_threeList == null) {
-      button_threeList = <String>[
+    List<String>? buttonThreelist = prefs.getStringList('button_threeList');
+    if (buttonThreelist == null) {
+      buttonThreelist = <String>[
         'https://www.gamingonlinux.com',
         'https://itsfoss.com',
         'https://www.omgubuntu.co.uk',
       ];
     }
-    ;
-    ButtonOneLabel = button_oneLabel;
-    ButtonOneList = button_oneList;
-    ButtonTwoLabel = button_twoLabel;
-    ButtonTwoList = button_twoList;
-    ButtonThreeLabel = button_threeLabel;
-    ButtonThreeList = button_threeList;
+    ButtonOneLabel = buttonOnelabel;
+    ButtonOneList = buttonOnelist;
+    ButtonTwoLabel = buttonTwolabel;
+    ButtonTwoList = buttonTwolist;
+    ButtonThreeLabel = buttonThreelabel;
+    ButtonThreeList = buttonThreelist;
   }
 
   Future<void> saveSettings(data) async {
     //Labels
-    String button_oneLabel = data[0][0];
-    String button_twoLabel = data[1][0];
-    String button_threeLabel = data[2][0];
+    String buttonOnelabel = data[0][0];
+    String buttonTwolabel = data[1][0];
+    String buttonThreelabel = data[2][0];
     //Lists
-    List<String> button_oneList = data[0][1];
-    List<String> button_twoList = data[1][1];
-    List<String> button_threeList = data[1][1];
+    List<String> buttonOnelist = data[0][1];
+    List<String> buttonTwolist = data[1][1];
+    List<String> buttonThreelist = data[1][1];
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     //Save Labels
-    await prefs.setString('button_oneLabel', button_oneLabel);
-    await prefs.setString('button_twoLabel', button_twoLabel);
-    await prefs.setString('button_threeLabel', button_threeLabel);
+    await prefs.setString('button_oneLabel', buttonOnelabel);
+    await prefs.setString('button_twoLabel', buttonTwolabel);
+    await prefs.setString('button_threeLabel', buttonThreelabel);
     // Save Lists;
-    await prefs.setStringList('button_oneList', button_oneList);
-    await prefs.setStringList('button_twoList', button_twoList);
-    await prefs.setStringList('button_threeList', button_threeList);
+    await prefs.setStringList('button_oneList', buttonOnelist);
+    await prefs.setStringList('button_twoList', buttonTwolist);
+    await prefs.setStringList('button_threeList', buttonThreelist);
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
@@ -319,12 +314,12 @@ class _DesktopDragonState extends State<DesktopDragon> {
                 tooltip: 'Close The App',
                 onPressed: () {
                   //save the app
-                  var save_data = [
+                  var saveData = [
                     [ButtonOneLabel, ButtonOneList],
                     [ButtonTwoLabel, ButtonTwoList],
                     [ButtonThreeLabel, ButtonThreeList],
                   ];
-                  saveSettings(save_data).then((tempdata) {
+                  saveSettings(saveData).then((tempdata) {
                     SystemChannels.platform.invokeMethod('SystemNavigator.pop');
                   });
                 },
