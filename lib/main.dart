@@ -189,12 +189,20 @@ class _DesktopDragonState extends State<DesktopDragon> {
                 Text('Deskrop Dragon was made by:'),
                 Text('Shadow Of Hassen'),
                 InkWell(
-                  onTap: () => launchUrl(Uri.parse('https://github.com/TheShadowOfHassen/Desktop-Dragon')),
+                  onTap: () => launchUrl(
+                    Uri.parse(
+                      'https://github.com/TheShadowOfHassen/Desktop-Dragon',
+                    ),
+                  ),
                   child: Text(
-                    'Click Here for more info',
-                    style: TextStyle(decoration: TextDecoration.underline, color: Colors.blue),
+                    'Click Here for the repo',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
+                Text('If you like the app please give it a star!'),
               ],
             ),
           ),
@@ -257,7 +265,11 @@ class _DesktopDragonState extends State<DesktopDragon> {
     ;
     List<String>? button_threeList = prefs.getStringList('button_threeList');
     if (button_threeList == null) {
-      button_threeList = <String>['https://www.gamingonlinux.com','https://itsfoss.com','https://www.omgubuntu.co.uk'];
+      button_threeList = <String>[
+        'https://www.gamingonlinux.com',
+        'https://itsfoss.com',
+        'https://www.omgubuntu.co.uk',
+      ];
     }
     ;
     ButtonOneLabel = button_oneLabel;
