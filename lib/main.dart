@@ -15,8 +15,7 @@ const SIZE = Size(400, 400);
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
-  //WindowManager.instance.setTitleBarStyle(TitleBarStyle.hidden);
-  // This needs to be hidden so we can drag it around
+  WindowManager.instance.setTitleBarStyle(TitleBarStyle.hidden);
   WindowManager.instance.setMinimumSize(SIZE);
   WindowManager.instance.setMaximumSize(SIZE);
   WindowManager.instance.setSize(SIZE);
@@ -302,34 +301,38 @@ class _DesktopDragonState extends State<DesktopDragon> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Desktop Dragon'),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.settings),
-            tooltip: 'Show Settings',
-            onPressed: () {
-              ShowSettingsDialog(context);
-            },
+      appBar: PreferredSize(
+        preferredSize: const Size(double.maxFinite, 50),
+        child: DragToMoveArea(
+          child: AppBar(
+            title: const Text('Desktop Dragon'),
+            actions: <Widget>[
+              IconButton(
+                icon: const Icon(Icons.settings),
+                tooltip: 'Show Settings',
+                onPressed: () {
+                  ShowSettingsDialog(context);
+                },
+              ),
+              IconButton(
+                icon: const Icon(Icons.close),
+                tooltip: 'Close The App',
+                onPressed: () {
+                  //save the app
+                  var save_data = [
+                    [ButtonOneLabel, ButtonOneList],
+                    [ButtonTwoLabel, ButtonTwoList],
+                    [ButtonThreeLabel, ButtonThreeList],
+                  ];
+                  saveSettings(save_data).then((tempdata) {
+                    SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+                  });
+                },
+              ),
+            ],
           ),
-          IconButton(
-            icon: const Icon(Icons.close),
-            tooltip: 'Close The App',
-            onPressed: () {
-              //save the app
-              var save_data = [
-                [ButtonOneLabel, ButtonOneList],
-                [ButtonTwoLabel, ButtonTwoList],
-                [ButtonThreeLabel, ButtonThreeList],
-              ];
-              saveSettings(save_data).then((tempdata) {
-                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
-              });
-            },
-          ),
-        ],
+        ),
       ),
-
       body: Center(
         child: Builder(
           builder: (context) {
