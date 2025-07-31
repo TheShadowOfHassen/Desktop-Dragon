@@ -120,7 +120,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
                     Expanded(
                       child: TextField(
                         controller: ButtonOneNameControler,
-                        maxLength: 12,
+                        maxLength: 10,
                       ),
                     ),
                   ],
@@ -133,7 +133,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
                     Expanded(
                       child: TextField(
                         controller: ButtonTwoNameControler,
-                        maxLength: 12,
+                        maxLength: 10,
                       ),
                     ),
                   ],
@@ -146,7 +146,7 @@ class _DesktopDragonState extends State<DesktopDragon> {
                     Expanded(
                       child: TextField(
                         controller: ButtonThreeNameControler,
-                        maxLength: 12,
+                        maxLength: 10,
                       ),
                     ),
                   ],
